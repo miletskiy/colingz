@@ -6,7 +6,15 @@
     transition: all .3s ease-out;
 }
 
-* {
+a,
+i,
+img,
+input,
+.ma-photo,
+.ma-blog,
+.ma-footer,
+.slick-arrow-prev,
+.slick-arrow-next {
     .transition
 } //using the mixin
 // Variables
@@ -96,6 +104,11 @@ ul {
         .navbar-toggle {
             background-color: @orange_color;
         }
+        .open {
+            a {
+                background-color: transparent;
+            }
+        }
     }
     &__brand {
         color: @yellow_color;
@@ -137,6 +150,15 @@ ul {
     .ma-text-right {
         float: right;
         margin-right: 15vw;
+    }
+}
+
+.dropdown-menu {
+    background-color: transparent;
+    li {
+        a {
+            color: @background_color;
+        }
     }
 }
 

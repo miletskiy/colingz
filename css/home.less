@@ -87,7 +87,7 @@ a, a:hover{
 	}
 }
 .ma-home__timeline{
-	background: #263238 url(../img/businessmen.jpg) top no-repeat;
+	background: #263238 url(../img/home-Businessmen.jpg) top no-repeat;
 	.ma-timeline__left{
 		padding: 60px 5%;
 		h2{
@@ -233,33 +233,42 @@ a, a:hover{
 	.slick-prev,
 	.slick-next
 	{
-		top: 100%;
+		top: 102%;
+		z-index: 10;
 	}
+	.slick-prev
+	{
+    	left: 25px;
+    }
+    .slick-next
+	{
+    	right: 50px;
+    }
 	.ma-travel__item{
 		position: relative;
-		overflow: hidden;
-		
+		padding: 10px;
 		.slider__img{
 			display: block;
-			height: 527px;
-			margin: 10px;
 		}
 		.ma-travel__hover{
 			display: none;
 			position: absolute;
-			bottom: 30px;
-			left: 30px; 
-			background-color: @grey_color;
-			padding: 50px;
+			bottom: 15px;
+			left: 15px; 
+			background-color: rgba(0, 0, 0, .3);
+			padding: 10px;
 			.ma-travel__country{
+				margin-bottom: 7px;
 				font-size: 24px;
 				color: white;
 			}
 			.ma-travel__date{
+				margin-bottom: 7px;
 				font-size: 16px;
 				color: white;
 			}
 			.ma-travel__link{
+				margin-bottom: 0;
 				font-size: 16px;
 				a{
 					color: @yellow_color;
@@ -276,5 +285,21 @@ a, a:hover{
 			display: block;
 		}
 	}
-	
+}
+@media screen and (max-width: 830px) {
+	.ma-home__travel{
+		.ma-travel__item{
+			.ma-travel__hover{
+				.ma-travel__country{
+					font-size: 14px;
+				}
+				.ma-travel__date{
+					font-size: 10px;
+				}
+				.ma-travel__link{
+					font-size: 10px;
+				}
+			}
+		}
+	}
 }
